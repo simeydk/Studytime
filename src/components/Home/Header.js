@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../Logo";
-import { GiHamburgerMenu } from "react-icons/gi";
 import "./Header.css";
 
 function Header() {
