@@ -5,6 +5,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    margin-top: 2em;
 }
 
 .custom-shape-divider-bottom-1593378745 svg {
@@ -12,6 +13,7 @@
     display: block;
     width: calc(210% + 1.3px);
     height: 240px;
+    z-index: -1;
 }
 
 .custom-shape-divider-bottom-1593378745 .shape-fill {
