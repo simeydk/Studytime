@@ -1,12 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./Home"
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./index.css";
+import './fonts/RobotoMono-Regular.ttf'
+import './fonts/MavenPro-VariableFont_wght.ttf'
+import './fonts/Poppins-Regular.ttf'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <App />
+        </Route>
+        <Route path="/dashboard">
+          <App />
+        </Route>
+      </Switch>
+    </div>
+  </Router>,
+  document.getElementById("root")
+);

@@ -1,27 +1,59 @@
+@import "./components/Buttons.css";
+
+:root{
+  --accent-green: #4caf72;
+  --accent-blue: #2196f3;
+  --accent-purple: #874caf;
+  --accent-purple-transparent: #874caf2d;
+  --accent-orange: #ff9800;
+  --accent-red: #f44336;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: local('Roboto Mono'), url(./fonts/RobotoMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MavenPro';
+  src: local('MavenPro'), url(./fonts/MavenPro-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+::selection{
+  background-color: #ddd;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "MavenPro", "Helvetica", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #eee;
-  font-family: sans-serif;
 }
 
 .container {
@@ -99,7 +131,7 @@ body {
   left: 38px;
   width: 28px;
   height: 28px;
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
   background: #fff;
@@ -109,7 +141,7 @@ body {
 }
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
-  content: '';
+  content: "";
   background: #8bc53f url(./svg/icon-check.svg) no-repeat;
   background-size: 27px;
   border-color: #8bc53f;

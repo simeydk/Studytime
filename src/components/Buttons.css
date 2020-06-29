@@ -1,0 +1,61 @@
+button {
+  border-radius: 0.5em;
+  border: 2px solid #e7e7e7;
+  outline: none;
+  padding: 0.7em 1.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 5em;
+  cursor: pointer;
+}
+
+.btn-green {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.btn-green:hover {
+  background-color: var(--accent-green);
+  color: white;
+}
+
+.btn-blue {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-blue:hover {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.btn-orange {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.btn-orange:hover {
+  background: var(--accent-orange);
+  color: white;
+}
+
+.btn-red {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.btn-red:hover {
+  background: var(--accent-red);
+  color: white;
+}
+
+.btn-purple {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
+}
+
+.btn-purple:hover {
+  background: var(--accent-purple);
+  color: white;
+}
