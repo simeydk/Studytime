@@ -1,7 +1,8 @@
 .Card{
     background-color: #fff;
     width: 20em;
-    height: 23em;
+    min-height: 23em;
+    height: auto;
     border-radius: 0.5em;
     padding: 1.5em;
     margin: 1em 0;
