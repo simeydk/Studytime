@@ -7,7 +7,7 @@ import Home from "./components/pages/Home";
 import Contingencies from "./components/pages/Contingencies";
 import Communications from "./components/pages/Communications";
 import Models from "./components/pages/Models";
-import App from "./App";
+// import App from "./App";
 
 // css
 import "./index.css";
