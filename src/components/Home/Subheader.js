@@ -1,6 +1,6 @@
 import React from "react";
 import "./Subheader.css";
-import Card from "../Card";
+import Card from "../utility/Card";
 
 import { GiFlame, GiMicrophone, GiLifeBar } from "react-icons/gi";
 
@@ -13,6 +13,7 @@ function Subheader() {
       </div>
       <div className="Card-wrapper">
         <Card
+          link='/about'
           icon={<GiMicrophone className="icon" />}
           heading="Communications"
           tags={["N211"]}

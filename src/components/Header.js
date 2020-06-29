@@ -1,15 +1,18 @@
 import React from "react";
-import Logo from "../Logo";
+import { Link } from "react-router-dom";
+import Logo from "./Utility/Logo";
 import "./Header.css";
 
 function Header() {
   const width = window.innerWidth;
   const breakpoint = 620;
-  
+
   return (
     <div className="Header">
       <div className="Logo">
-      <Logo/>
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
       <div className="Admin">
         {width < breakpoint ? (
