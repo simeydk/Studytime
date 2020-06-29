@@ -1,3 +1,10 @@
+.footer{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* SVG Wave from https://www.shapedivider.app */
 .custom-shape-divider-bottom-1593378745 {
     /* position: absolute; */
     bottom: 0;
@@ -5,7 +12,6 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    margin-top: 2em;
 }
 
 .custom-shape-divider-bottom-1593378745 svg {
@@ -21,10 +27,11 @@
 }
 
 .Footer-content {
-    height: 15em;
-    padding: 2em;
     background-color: #fff;
+    height: auto;
+    padding: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }

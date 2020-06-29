@@ -1,12 +1,14 @@
 .Card{
     background-color: #fff;
+    min-width: 20em;
     width: 20em;
     min-height: 23em;
     height: auto;
     border-radius: 0.5em;
     padding: 1.5em;
-    margin: 1em 0;
     box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,.12);
+    justify-self: center;
+    align-self: center;
 }
 
 .Card:hover{
