@@ -9,6 +9,10 @@
     font-weight: bold;
 }
 
+.Logo{
+    padding-left: 2em;
+}
+
 .Links > ul > li{
     list-style: none;
     padding-left: 1em;

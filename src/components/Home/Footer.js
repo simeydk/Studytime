@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import Logo from "../Logo"
 
 function Footer() {
   return (
@@ -17,7 +18,13 @@ function Footer() {
           />
         </svg>
       </div>
-      <div className="Footer-content">&copy; Ratul Maharaj</div>
+      <div className="Footer-content">
+      <Logo/>
+      <br/>
+      <div>
+      &copy; Ratul Maharaj
+      </div>
+      </div>
     </div>
   );
 }

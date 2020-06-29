@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Logo() {
-    return (
-        <div style={{fontSize:`1em` , paddingLeft:`2em`}}>
-            <h2>Studytime</h2>
-        </div>
-    )
+  return <h2 style={{color:`var(--accent-purple)`, margin:`0`, padding:`0`}}>Studytime</h2>;
 }
 
-export default Logo
+export default Logo;

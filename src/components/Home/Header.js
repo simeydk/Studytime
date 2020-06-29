@@ -8,7 +8,9 @@ function Header() {
   
   return (
     <div className="Header">
-      <Logo />
+      <div className="Logo">
+      <Logo/>
+      </div>
       <div className="Admin">
         {width < breakpoint ? (
           <button className="btn-purple">Login</button>
