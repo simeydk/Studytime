@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../Header";
-import Subheader from "../home/Subheader";
+import Content from "../home/Content";
 import Footer from "../Footer";
 
 function Home() {
   return (
     <>
       <Header />
-      <div className='content'>
-      <Subheader />
+      <div className='content-wrapper'>
+      <Content />
       </div>
       <Footer />
     </>
