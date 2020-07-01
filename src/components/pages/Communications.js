@@ -7,7 +7,7 @@ function Communications() {
   return (
       <>
       <Header />
-      <div className='content'>
+      <div className='content-wrapper'>
       <Apps pastpapers={true} quiz={false} flashcards={false} />
       </div>
       <Footer />

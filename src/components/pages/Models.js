@@ -7,7 +7,7 @@ function Models() {
   return (
       <>
       <Header />
-      <div className='content'>
+      <div className='content-wrapper'>
       <Apps pastpapers={true} quiz={true} flashcards={true} />
       </div>
       <Footer />

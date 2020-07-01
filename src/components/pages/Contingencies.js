@@ -7,7 +7,7 @@ function Contingencies() {
   return (
       <>
       <Header />
-      <div className='content'>
+      <div className='content-wrapper'>
       <Apps pastpapers={true} quiz={true} flashcards={false} />
       </div>
       <Footer />

@@ -12,11 +12,6 @@
 /* Fonts */
 
 @font-face {
-  font-family: 'Roboto Mono';
-  src: local('Roboto Mono'), url(./fonts/RobotoMono-Regular.ttf) format('truetype');
-}
-
-@font-face {
   font-family: 'MavenPro';
   src: local('MavenPro'), url(./fonts/MavenPro-VariableFont_wght.ttf) format('truetype');
 }

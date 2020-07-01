@@ -13,7 +13,7 @@ function Apps(props) {
       </div>
       <div className="Card-wrapper">
         <Card
-          link={props.flashcards ? '/' : '#'}
+          link={props.flashcards ? '/flashcards' : '#'}
           active={props.flashcards}
           icon={<GiCardRandom className="icon" />}
           heading="Flashcards"
