@@ -14,7 +14,7 @@ function flashcards(props) {
         <div className="Content">
           <div className="Intro">
             <h1>Flashcards</h1>
-            <p>Hover over the card to flip it over.</p>
+            <p>Hover over or tap the card to flip it over.</p>
           </div>
           <div className="flashcard-wrapper">
             <div className="flashcard">
