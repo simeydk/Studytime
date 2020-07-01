@@ -1,0 +1,30 @@
+{
+  "pack": "ExampleQuestions",
+  "cards": [
+    {
+      "id": 1,
+      "question": "In Harry Potter, what is the name of The Weasley's house?",
+      "answer": "The Burrow."
+    },
+    {
+      "id": 2,
+      "question": "What's a baby rabbit called?",
+      "answer": "A kit."
+    },
+    {
+      "id": 3,
+      "question": "Typically, what's the strongest muscle in the human body?",
+      "answer": "The masseter - the main jaw muscle."
+    },
+    {
+      "id": 4,
+      "question": "What does LGBTQ stand for?",
+      "answer": "Lesbian, gay, bisexual, transgender, and questioning (or queer)."
+    },
+    {
+      "id": 5,
+      "question": "To a single decimal point, many kilometers in a mile?",
+      "answer": "1.6km"
+    }
+  ]
+}
