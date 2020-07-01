@@ -6,13 +6,10 @@ import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 import "./Flashcards.css";
 
-var questions = require("../../api/flashcards/ExampleQuestions.json");
-console.log(questions);
-console.log(questions.cards.length);
-
 // max character count of 1567 must be allowed
 
 function Flashcards() {
+  const questions = require("../../api/flashcards/ExampleQuestions.json");
   const [ID, setID] = useState(0);
 
   return (
