@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
-
 import "./Flashcards.css";
 
 // max character count of 1567 must be allowed
 
 function Flashcards() {
-  const questions = require("../../api/flashcards/ExampleQuestions.json");
+  const questions = require("../../../api/flashcards/ExampleQuestions.json");
   const [ID, setID] = useState(0);
 
   return (
     <>
-      <Header />
       <div className="content-wrapper">
         <div className="Content">
           <div className="Intro">
@@ -57,7 +52,6 @@ function Flashcards() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

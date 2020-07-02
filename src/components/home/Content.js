@@ -13,21 +13,21 @@ function Content() {
       </div>
       <div className="Card-wrapper">
         <Card
-          link='/communications-apps'
+          link='/communications'
           icon={<GiMicrophone className="icon" />}
           heading="Communications"
           tags={["N211"]}
           description="Communications Exam Preparation."
         />
         <Card
-          link='/contingencies-apps'
+          link='/contingencies'
           icon={<GiFlame className="icon" />}
           heading="Contingencies"
           tags={["A213", "CM1"]}
           description="Past Exam Questions and MCQ's based on the content of A213 (commonly referred to as CT5)."
         />
         <Card
-          link='/models-apps'
+          link='/models'
           icon={<GiLifeBar className="icon" />}
           heading="Risk Modelling and Survival Analysis"
           tags={["A212", "CS2"]}

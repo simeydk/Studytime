@@ -1,5 +1,3 @@
-@import "./components/utility/Buttons.css";
-
 :root{
   --accent-green: #4caf72;
   --accent-blue: #2196f3;
@@ -9,29 +7,17 @@
   --accent-red: #f44336;
 }
 
-/* Fonts */
-
-@font-face {
-  font-family: 'MavenPro';
-  src: local('MavenPro'), url(./fonts/MavenPro-VariableFont_wght.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: local('Poppins'), url(./fonts/Poppins-Regular.ttf) format('truetype');
-}
-
 ::selection{
   background-color: #ddd;
 }
 
-body {
+body{
   margin: 0;
   padding: 0;
   font-family: "MavenPro", "Helvetica", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  height: 100vh;
   display: block;
   background: #eee;
 }
@@ -152,7 +138,7 @@ code {
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
   content: "";
-  background: #8bc53f url(./svg/icon-check.svg) no-repeat;
+  /* background: #8bc53f url(./svg/icon-check.svg) no-repeat; */
   background-size: 27px;
   border-color: #8bc53f;
 }
