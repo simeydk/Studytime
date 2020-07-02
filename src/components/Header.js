@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "gatsby";
 import Logo from "./utility/Logo";
 import "./Header.css";
 
 function Header() {
-  const width = window.innerWidth;
-  const breakpoint = 620;
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    const breakpoint = 620;
+    return width, breakpoint
+  }, [])
 
   return (
     <div className="Header">
