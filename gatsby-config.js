@@ -18,12 +18,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Studytime`,
+        short_name: `Studytime`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#dddddd`,
+        theme_color: `#874caf`,
+        display: `standalone`,
         icon: `src/images/favicon.png`, 
       },
     },
