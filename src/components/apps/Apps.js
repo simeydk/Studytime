@@ -1,5 +1,5 @@
 import React from "react";
-import "../home/Content.css";
+import "../subjects/Content.css";
 import Card from "../utility/Card";
 
 import { GiCardRandom, GiPencil,  GiTimeTrap } from "react-icons/gi";

@@ -1,14 +1,15 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "gatsby";
 import Logo from "./utility/Logo";
 import "./Header.css";
 
 function Header() {
 
+  const breakpoint = 620;
+  const [width, setWidth] = useState(0)
+
   useEffect(() => {
-    const width = window.innerWidth;
-    const breakpoint = 620;
-    return width, breakpoint
+    setWidth(window.innerWidth)
   }, [])
 
   return (
