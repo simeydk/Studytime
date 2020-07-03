@@ -46,18 +46,6 @@ function Page() {
 
     return (
         <div id="root">
-            {/* <pre>{JSON.stringify(pairs, null, 2)}</pre> */}
-            <form>
-                <section>
-                    <label for="front-value">Front value:</label>
-                    <input id="front-value" type="text" value={frontText} onChange={e => setFrontText(e.target.value)} />
-                </section>
-                <section>
-                    <label for="back-value">Back value:</label>
-                    <input id="back-value" type="text" value={backText} onChange={e => setBackText(e.target.value)} />
-                </section>
-            </form>
-            <div>{index}</div>
             <div className="card-wrapper" onClick={toggleFlipped}>
                 <div className={className}>
                     <div className="card-side front">{question}</div>
