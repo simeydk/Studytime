@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { useHotkeys } from 'react-hotkeys-hook';
 import { MdNavigateNext, MdNavigateBefore, MdSwapHoriz } from "react-icons/md"
 import "./Flashcards.css"
 
@@ -7,23 +8,35 @@ import "./Flashcards.css"
 function Flashcards() {
   const questions = require("../../../api/flashcards/ExampleQuestions.json")
   const [isFlipped, setIsFlipped] = useState("")
-  const [ID, setID] = useState(0)
+  const [cardID, setCardID] = useState(0)
+
+  const [question, setQuestion] = useState(questions.cards[0].question)
+  const [answer, setAnswer] = useState(questions.cards[0].answer)
 
   const handleFlip = e => {
     isFlipped === "" ? setIsFlipped("flipped") : setIsFlipped("")
   }
 
   const handlePrevious = e => {
-    ID - 1 < 0 ? setID(0) : setID(ID - 1)
+    cardID - 1 < 0 ? setCardID(0) : setCardID(cardID - 1)
     setIsFlipped("")
   }
 
   const handleNext = e => {
-    ID + 1 >= questions.cards.length
-      ? setID(questions.cards.length - 1)
-      : setID(ID + 1)
+    cardID + 1 >= questions.cards.length
+      ? setCardID(questions.cards.length - 1)
+      : setCardID(cardID + 1)
     setIsFlipped("")
   }
+
+  useEffect(() => {
+    setQuestion(questions.cards[cardID].question)
+    setAnswer(questions.cards[cardID].answer)
+  }, [cardID])
+
+  useHotkeys('left', () => handlePrevious(),[cardID])
+  useHotkeys('right', () => handleNext(),[cardID])
+  useHotkeys('space', (e) =>{ e.preventDefault(); handleFlip();} ,[isFlipped])
 
   return (
     <>
@@ -31,7 +44,7 @@ function Flashcards() {
         <div className="Content">
           <div className="Intro">
             <h1>Flashcards</h1>
-            <p>Click or touch the card to flip it over.</p>
+            <p>Tap the card or press the spacebar to flip it over. Use the arrow keys to navigate between cards.</p>
           </div>
           <div className="flashcard-wrapper">
             <div className="flashcard">
@@ -43,19 +56,19 @@ function Flashcards() {
                   <div className="flip-card-front">
                     <h4 style={{ margin: `0` }}>Question</h4>
                     <div className="flashcard-content">
-                      <h3>{questions.cards[ID].question}</h3>
+                      <h3>{question}</h3>
                     </div>
                     <p style={{ margin: `0`, opacity: `0.6` }}>
-                      {questions.cards[ID].id} of {questions.cards.length}
+                      {cardID + 1 } of {questions.cards.length}
                     </p>
                   </div>
                   <div className="flip-card-back">
                     <h4 style={{ margin: `0` }}>Answer</h4>
                     <div className="flashcard-content">
-                      <h3>{questions.cards[ID].answer}</h3>
+                      <h3>{answer}</h3>
                     </div>
                     <p style={{ margin: `0`, opacity: `0.6` }}>
-                      {questions.cards[ID].id} of {questions.cards.length}
+                      {cardID + 1} of {questions.cards.length}
                     </p>
                   </div>
                 </div>
