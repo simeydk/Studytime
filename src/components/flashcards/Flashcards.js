@@ -8,8 +8,21 @@ function Flashcards() {
   const questions = require("../../../api/flashcards/ExampleQuestions.json")
   const [isFlipped, setIsFlipped] = useState("")
   const [ID, setID] = useState(0)
+
   const handleFlip = e => {
     isFlipped === "" ? setIsFlipped("flipped") : setIsFlipped("")
+  }
+
+  const handlePrevious = e => {
+    ID - 1 < 0 ? setID(0) : setID(ID - 1)
+    setIsFlipped("")
+  }
+
+  const handleNext = e => {
+    ID + 1 >= questions.cards.length
+      ? setID(questions.cards.length - 1)
+      : setID(ID + 1)
+    setIsFlipped("")
   }
 
   return (
@@ -51,7 +64,7 @@ function Flashcards() {
             <div className="flashcard-button-wrapper">
               <div
                 className="flashcard-button-previous"
-                onClick={e => (ID - 1 < 0 ? setID(0) : setID(ID - 1))}
+                onClick={e => handlePrevious()}
               >
                 <MdNavigateBefore />
               </div>
@@ -63,11 +76,7 @@ function Flashcards() {
               </div>
               <div
                 className="flashcard-button-next"
-                onClick={e =>
-                  ID + 1 >= questions.cards.length
-                    ? setID(questions.cards.length - 1)
-                    : setID(ID + 1)
-                }
+                onClick={e => handleNext()}
               >
                 <MdNavigateNext />
               </div>
