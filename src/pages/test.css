@@ -1,3 +1,38 @@
+
+
+
+.card-wrapper {
+    perspective: 600px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    transition-duration:  0.5s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(-180deg);
+}
+
+.card-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    transform: rotateY(-180deg)
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,43 +45,6 @@
     align-items: center;
 }
 
-
-.card-wrapper {
-    /* transform-style: preserve-3d; */
-    perspective: 600px;
-}
-
-.card {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    transition-duration:  0.5s;
-    transition-timing-function: ease-in-out;
-    transform-style: preserve-3d;
-    /* perspective: 600px; */
-}
-
-.flipped {
-    transform: rotateY(180deg);
-}
-
-.card-side {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0px;
-    right: 0px;
-}
-
-.front {
-    z-index: 1;
-}
-
-.back {
-    transform: rotateY(180deg)
-}
-
-
 .card-side {
     box-shadow: 3px 3px 3px #0002;
 }
@@ -55,20 +53,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    padding: 1em;
+    color: white;
+    font-size: 28px;
     border: 10px solid white;
-    border-radius: 20px;   
+    border-radius: 20px;
+    text-align: center;   
 }
 
 .front {
-    /* bottom: 100px;
-    right: 100px; */
     background: linear-gradient(90deg, tomato, firebrick);
 
 }
 
 .back {
-    /* top: 100px;
-    left: 100px; */
     background: linear-gradient(90deg, skyblue, slateblue);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin-top: 2em;
+}
+
+.button {
+    width: 2em;
+    background: darkgray;
+    color:white;
+}
+
+.button:hover {
+    background: firebrick;
 }
