@@ -1,3 +1,5 @@
+/* ESSENTIAL CARD FUNCTIONALITY */
+
 .card-wrapper {
     perspective: 600px;
 }
@@ -20,6 +22,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    background:white;
 }
 
 .front {
@@ -29,6 +32,9 @@
 .back {
     transform: rotateY(-180deg)
 }
+
+
+/* Formatting flourishes*/
 
 * {
     padding: 0;
@@ -42,9 +48,6 @@
     align-items: center;
 }
 
-.card-side {
-    box-shadow: 3px 3px 3px #0002;
-}
 
 .card-side {
     display: flex;
@@ -56,11 +59,11 @@
     border: 10px solid white;
     border-radius: 20px;
     text-align: center;   
+    box-shadow: 3px 3px 3px #0002;
 }
 
 .front {
     background: linear-gradient(90deg, tomato, firebrick);
-
 }
 
 .back {
