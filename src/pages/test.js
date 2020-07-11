@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react"
-import { useHotkeys } from 'react-hotkeys-hook';
+import {
+    ButtonBack,
+    ButtonNext,
+    CarouselProvider,
+    Dot,
+    Slide,
+    Slider,
+} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import './test.css'
 
@@ -10,10 +18,7 @@ const pairs = zip([quiz.q_list, quiz.a_list])
 
 function Page() {
     const [flipped, setFlipped] = useState(false)
-    const toggleFlipped = () => { console.log('toggle flipped'); setFlipped(!flipped) }
-
-    const [frontText, setFrontText] = useState("Front")
-    const [backText, setBackText] = useState("Back")
+    const toggleFlipped = () => setFlipped(!flipped)
 
     const [index, setIndex] = useState(0)
     const [question, answer] = pairs[index]
@@ -36,24 +41,52 @@ function Page() {
 
     useEffect(() => {
         document.addEventListener('keydown', onKeydown)
-
         return () => document.removeEventListener('keydown', onKeydown)
     })
 
-    // useHotkeys('space', e => { e.preventDefault(); console.log('space'); toggleFlipped(); })
+    return (
+        <div id="root">
+            <CarouselProvider
+                naturalSlideWidth={300}
+                naturalSlideHeight={200}
+                totalSlides={pairs.length}
+                visibleSlides={1}
+            >
+                <div className="the-carousel">
+                    <Slider>
+                        {pairs.map(([q, a], i) => (
+                            <Slide index={i} tag="span">
+                                <Card question={q} answer={a} />
+                            </Slide>
+                        ))}
+                    </Slider>
+                </div>
+                <div>
+                    <ButtonBack>Back</ButtonBack>
+                    <ButtonNext>Next</ButtonNext>
+                </div>
+            </CarouselProvider>
+            <Card flipped={flipped} setFlipped={setFlipped} question={question} answer={answer} />
+            <div className="buttons">
+                {pairs.map((_, i) => <button className="button" onClick={() => setIndex(i)}>{i + 1}</button>)}
+            </div>
+        </div>
+    )
+}
+
+function Card({ flipped: flippedProp = null, setFlipped: setFlippedProp = undefined, question, answer, }) {
+    const [flipped, setFlippedInternal] = useState(flippedProp == true)
+    useEffect(() => setFlippedInternal(flippedProp), [flippedProp])
+    const setFlipped = setFlippedProp || setFlippedInternal
+    const toggleFlipped = () => setFlipped(!flipped)
 
     const className = ["card", flipped ? ' flipped' : ''].join(' ')
 
     return (
-        <div id="root">
-            <div className="card-wrapper" onClick={toggleFlipped}>
-                <div className={className}>
-                    <div className="card-side front">{question}</div>
-                    <div className="card-side back">{answer}</div>
-                </div>
-            </div>
-            <div className="buttons">
-                {pairs.map((_, i) => <button className="button" onClick={() => setIndex(i)}>{i + 1}</button>)}
+        <div className="card-wrapper" onClick={toggleFlipped}>
+            <div className={className}>
+                <div className="card-side front">{question}</div>
+                <div className="card-side back">{answer}</div>
             </div>
         </div>
     )
